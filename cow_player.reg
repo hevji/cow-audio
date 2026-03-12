@@ -1,0 +1,39 @@
+Windows Registry Editor Version 5.00
+
+; ============================================================
+;  COW Player — File Association Installer
+;  Double-click this .reg file to install.
+;  It will associate .cow files with cow_player.exe so that
+;  double-clicking any .cow file opens COW Player automatically.
+;
+;  IMPORTANT: Edit the path on the "Default" line below to
+;  match wherever you put cow_player.exe on your system.
+;  Example: if you put it in C:\COWPlayer\  change the path.
+; ============================================================
+
+; ── Register the .cow file extension ─────────────────────────────────────────
+[HKEY_CLASSES_ROOT\.cow]
+@="COWAudioFile"
+"Content Type"="audio/x-cow"
+
+; ── Register the file type and its description ───────────────────────────────
+[HKEY_CLASSES_ROOT\COWAudioFile]
+@="COW Compressed Wave Audio"
+
+[HKEY_CLASSES_ROOT\COWAudioFile\DefaultIcon]
+@="C:\\COWPlayer\\cow_player.exe,0"
+
+; ── Register the open command ─────────────────────────────────────────────────
+[HKEY_CLASSES_ROOT\COWAudioFile\shell]
+@="open"
+
+[HKEY_CLASSES_ROOT\COWAudioFile\shell\open]
+@="Play with COW Player"
+
+[HKEY_CLASSES_ROOT\COWAudioFile\shell\open\command]
+@="\"C:\\COWPlayer\\cow_player.exe\" \"%1\""
+
+; ── Also register under App Paths so Windows can find it ──────────────────────
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\cow_player.exe]
+@="C:\\COWPlayer\\cow_player.exe"
+"Path"="C:\\COWPlayer"

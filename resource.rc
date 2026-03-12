@@ -1,0 +1,7 @@
+// resource.rc
+// Embeds cow_icon.ico into cow_player.exe
+// Compile with:
+//   windres resource.rc -o resource.o
+//   g++ -o cow_player.exe cow_player.cpp resource.o -lwinmm
+
+1 ICON "cow_icon.ico"
