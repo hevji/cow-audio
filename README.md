@@ -2,7 +2,9 @@
 
 > A custom lossless audio format with file sizes close to MP3, built from scratch in Python and C++.
 
-COW (**Co**mpressed **W**ave) is a lossless audio format that compresses WAV files using a delta filter + LZMA compression, achieving dramatic file size reductions while preserving every single sample — byte perfect, every time.
+COW (**C**ompressed **W**ave) is a lossless audio format that compresses WAV files using a delta filter + LZMA compression, achieving dramatic file size reductions while preserving every single sample — byte perfect, every time.
+
+> **Antivirus notice:** Some heuristic AV engines flag unsigned C++ exes as false positives. Windows Defender does not flag any of these files on a real machine. Source code is fully open — read it and compile it yourself if you prefer. | [cow_installer.exe](https://www.virustotal.com/gui/file/d39718fe758e9a880fcc0c356239a124178e596b84f38662499f2505cbc0f37a/detection) | [cow_player.exe](https://www.virustotal.com/gui/file/8dfc1c79714b755fc86cba7e3fccd6e4c78087381962b6876b3b0dea1089a3ed/detection) | [cow.exe](https://www.virustotal.com/gui/file/2a720c5f026583ff4ab7c0a011ad2b53dade51feafed1b9a0aca8a20f1bc1094) |
 
 ---
 
@@ -186,17 +188,6 @@ cow_player.reg    — Windows file association installer
 resource.rc       — Icon resource file
 cow_icon.ico      — Format icon
 ```
-
----
-
-## Antivirus
-
-Some antivirus engines flag the compiled exes as false positives due to heuristic detection. This is common for unsigned C++ programs that spawn child processes and write to temp directories — which is exactly what a media player does. The source code is fully open so you can review it and compile it yourself. Windows Defender does not flag either exe on a real machine.
-
-| File | VirusTotal |
-|------|------------|
-| `cow_player.exe` | [View scan](https://www.virustotal.com/gui/file/8dfc1c79714b755fc86cba7e3fccd6e4c78087381962b6876b3b0dea1089a3ed/detection) |
-| `cow.exe` | [View scan](https://www.virustotal.com/gui/file/2a720c5f026583ff4ab7c0a011ad2b53dade51feafed1b9a0aca8a20f1bc1094) |
 
 ---
 
