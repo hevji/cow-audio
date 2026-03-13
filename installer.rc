@@ -1,0 +1,7 @@
+// installer.rc
+// Embeds the icon and UAC manifest into cow_installer.exe
+
+1 ICON "cow_icon.ico"
+
+// UAC manifest — tells Windows this needs admin
+1 RT_MANIFEST "installer.manifest"
