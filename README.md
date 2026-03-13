@@ -189,6 +189,17 @@ cow_icon.ico      — Format icon
 
 ---
 
+## Antivirus
+
+Some antivirus engines flag the compiled exes as false positives due to heuristic detection. This is common for unsigned C++ programs that spawn child processes and write to temp directories — which is exactly what a media player does. The source code is fully open so you can review it and compile it yourself. Windows Defender does not flag either exe on a real machine.
+
+| File | VirusTotal |
+|------|------------|
+| `cow_player.exe` | [View scan](https://www.virustotal.com/gui/file/8dfc1c79714b755fc86cba7e3fccd6e4c78087381962b6876b3b0dea1089a3ed/detection) |
+| `cow.exe` | [View scan](https://www.virustotal.com/gui/file/2a720c5f026583ff4ab7c0a011ad2b53dade51feafed1b9a0aca8a20f1bc1094) |
+
+---
+
 ## License
 
 MIT — do whatever you want with it.
